@@ -21,3 +21,30 @@ a {
 body {
   background-color: #002429;
 }
+
+#submit-btn {
+  border-radius: 15px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: #00515c;
+  border: none;
+}
+
+#submit-btn:hover {
+  background-color: #E9C46A;
+  color: #0D1321;
+  transition: 250ms;
+}
+
+.input-box {
+  height: 50px;
+  border-radius: 10px;
+
+}
+
+.task-list {
+  font-size: 28px;
+}

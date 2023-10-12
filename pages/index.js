@@ -1,32 +1,34 @@
+import React from 'react';
 import { Button } from 'react-bootstrap';
-import { signOut } from '../utils/auth';
 import { useAuth } from '../utils/context/authContext';
 
 function Home() {
   const { user } = useAuth();
 
   return (
-    <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
-      style={{
-        height: '90vh',
-        padding: '30px',
-        maxWidth: '400px',
-        margin: '0 auto',
-      }}
-    >
-      <h1>Hello {user.displayName}! </h1>
-      <p>Click the button below to logout!</p>
-      <Button
-        variant="danger"
-        type="button"
-        size="lg"
-        className="copy-btn"
-        onClick={signOut}
+    <>
+      <div>
+        <h1 className="text-center mt-3">TODOIST</h1>
+        <h4 className="text-center mt-3">What are you doing today, {user.displayName}?</h4>
+      </div>
+      <div
+        className="text-center d-flex flex-column w-25"
+        style={{
+          margin: '0 auto',
+        }}
       >
-        Sign Out
-      </Button>
-    </div>
+        <form>
+          <input
+            type="text"
+            className="input-box mt-3"
+          />
+          <Button type="submit" size="lg" id="submit-btn">ADD</Button>
+        </form>
+        <ul className="mt-3 task-list">
+          <li>test</li>
+        </ul>
+      </div>
+    </>
   );
 }
 
